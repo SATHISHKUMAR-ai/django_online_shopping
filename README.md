@@ -1,6 +1,1 @@
-# shopcart
-# shopcart
-# shopcart
-# shopcart
-# ddo
-# ddddddvsA
+DJANGO HTML5 CSS JAVASCRIPT PYTHON 
