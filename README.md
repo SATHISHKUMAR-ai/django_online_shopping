@@ -1,1 +1,1 @@
-DJANGO HTML5 CSS JAVASCRIPT PYTHON 
+DJANGO           HTML5                      CSS                       JAVASCRIPT                                   PYTHON 
