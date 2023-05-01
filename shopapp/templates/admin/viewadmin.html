@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dasboards</title>
+     <!-- fontawesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- bootstrap5 icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+     <!-- bootstrap - icon end -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+     <!-- bootstrap css -->
+     <link rel = "stylesheet" href = "{% static 'bootstrap/css/bootstrap.min.css' %}">
+   <style>
+   body {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --primary: #94618e;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.text-purple {
+  color: var(--primary);
+}
+
+.bg-purple {
+  background-color: var(--primary);
+  color: white;
+}
+
+   </style>
+</head>
+<body>
+    <nav class="nav bg-purple justify-content-center">
+        <a class="nav-link text-white" href="/baseadmin"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        
+        <a class="nav-link text-white" href="logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      </nav>
+      <div class="container">
+        <h1>PRODUCT VIEW</h1><br>
+        <a class="btn btn-primary" href="/firstadd">Add Product</a>
+        <table class="table table-striped">
+            <thead>
+                <th>Product Name</th>
+                <th>Top sale</th>
+                <th>Product image</th>
+                <th>Product Price</th>
+                <th>Discount Price</th>
+                <th>Producttitle name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+    {% for show in view %}
+                <tr>
+                    <td>{{ show.pname}}</td>
+                    <td>{{ show.circlesale}}</td>
+                    <td>{{ show.image }}</td>
+                    <td>{{ show.rate }}</td>
+                    <td>{{ show.cutrate }}</td>
+                    <td>{{ show.product_tittle }}</td>
+                    <!-- <td>{{ show.StudentSecondMark }}</td> -->
+                    <td><a class="btn btn-info" href="/editadmin/{{ show.id }}">Edit</a></td>
+                    <td><a class="btn btn-danger" href="/delete/{{ show.id }}">Delete</a></td>
+                </tr>
+    {% endfor %}
+            </tbody>
+        </table>         
+    </div>
+       <!-- jquery -->
+    <script src = "{% static 'js/jquery-3.6.0.js' %}"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- custom js -->
+    <script src = "{% static 'js/script.js' %}"></script>
+</body>
+</html>

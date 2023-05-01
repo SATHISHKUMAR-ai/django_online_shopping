@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----Boostrap -->
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<!---css file-->
+	
+    <title>login page</title>
+
+</head>
+<body><!-----------------login-------------------------------->
+            <form method="POST" action="/getforgot" class="was-validated align-items-center m-5">
+            {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-4 ">
+                        <h4 class="display-5">FORGET PASSWORD</h4>
+                    <label for="uname" class="form-label">User Mail Id</label>
+                    <input type="email" class="form-control" id="uname" placeholder="Enter Your user Id" name="mail" value="" required>
+                    <div class="valid-feedback">Valided</div>
+                    
+                    <label for="pwd" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pd" value="" required>
+                    <div class="valid-feedback">Valided</div>
+                    
+        <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
+                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="registration"
+                        class="fw-bold text-body"><u>New Registration</u></a></p>
+                        <p class="text-center text-muted mt-5 mb-0"><a href="login"
+                            class="fw-bold text-body"><u>Already Login</u></a></p>
+            
+                </div>
+        
+                
+            </form>   
+</body>
+</html>
