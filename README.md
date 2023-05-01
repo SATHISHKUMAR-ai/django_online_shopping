@@ -1,1 +1,1 @@
-DJANGO           HTML5                      CSS                       JAVASCRIPT                                   PYTHON 
+Django-online Shopping for python
